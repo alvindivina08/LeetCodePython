@@ -1,5 +1,9 @@
+from typing import List
+
+
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
+        # nums = [1, 2, 3, 4]
 
         result = [[] for i in range(len(nums))]
 
