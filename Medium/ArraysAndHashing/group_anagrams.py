@@ -50,6 +50,15 @@ class Solution:
             count = [0] * 26
             for c in s:
                 count[ord(c) - ord('a')] += 1
+            """
+            Tuples are used to store multiple items in a single variable.
+
+            Tuple is one of 4 built-in data types in Python used to store collections of data, 
+            the other 3 are List, Set, and Dictionary, all with different qualities and usage.
+
+            A tuple is a collection which is ordered and unchangeable.
+            https://www.w3schools.com/python/python_tuples.asp#:~:text=%2C%20%22cherry%22)-,Tuple,which%20is%20ordered%20and%20unchangeable.
+            """
             result[tuple(count)].append(s)
 
         return result.values()
