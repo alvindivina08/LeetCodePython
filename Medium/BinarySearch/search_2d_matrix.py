@@ -8,22 +8,27 @@ class Solution:
         top, bot = 0, ROWS - 1
 
         while top <= bot:
+            # calculate the middle pointer by adding top and bot divided by 2
             row = (top + bot) // 2
+            # if target is larger than the last number in current row
             if target > matrix[row][-1]:
-                # why do i get confused between top and row here ? 
+                # move the top pointer by 1
                 top = row + 1
-            # made a mistake here. why did i use -1 instead of 0?
+            # else if target is less than the first number in current row
             elif target < matrix[row][0]:
+                # move the bottom pointer to the row - 1 (above it)
                 bot = row - 1
+            # else if the target is in the row
             else:
                 break
-
+        # if row is not found, return False
         if not (top <= bot):
             return False
 
         row = (top + bot) // 2
         l, r = 0, COLS - 1
 
+        # now execute the two pointer binary search
         while l <= r:
             m = (l + r) // 2
             if target > matrix[row][m]:
