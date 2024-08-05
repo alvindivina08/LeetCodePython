@@ -13,3 +13,4 @@ class Solution:
         
         return ""
         
+arr = ["d","b","c","b","c","a"]
