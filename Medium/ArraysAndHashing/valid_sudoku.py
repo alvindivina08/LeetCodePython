@@ -9,6 +9,11 @@ class Solution:
         # and squares
 
         # we are basically saving the coordinates of the numbers we have seen in the board
+
+        """
+        The default initializer prevents you from getting the KeyError and instead does whatever you tell it to in the defaultdict constructor. 
+        This is also handy when you want a dictionary of lists, or a dictionary of dictionaries, and so on.
+        """
         rows = defaultdict(set)
         cols = defaultdict(set)
         squares = defaultdict(set)
